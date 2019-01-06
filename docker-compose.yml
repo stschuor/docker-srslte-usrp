@@ -1,0 +1,10 @@
+version: '2'
+services:
+  srsenb:
+    build: ./
+    container_name: srsenb
+    privileged: true
+    network_mode: "host"
+    volumes:
+      - /dev/bus/usb
+      - ./conf:/conf
